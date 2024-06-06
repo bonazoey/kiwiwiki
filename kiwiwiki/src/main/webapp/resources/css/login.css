@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.form-content {
+	width: 500px;
+	height: 100%;
+	justify-content: space-between;
+}
+
+#loginForm {
+	height: 500px;
+	width: 100%;
+	justify-content: center;
+}
+
+.form-input {
+	border: solid 1px;
+	border-color: #ccc;
+ 	display: flex;
+ 	padding: 10px 0 10px 0;
+ 	justify-content: center;
+}
+
+.form-input input {
+	border: none;
+	flex-grow: 1;
+}
+
+.border-radius-up {
+	border-radius: 15px 15px 0 0 !important;
+}
+
+.border-radius-down {
+	border-radius: 0 0 15px 15px !important;
+}
+
+
+.form-input::before {
+	padding: 0 20px 0 0;
+	content: "";
+	width: 30px;
+	height: 30px;
+}
+
+.id::before {
+	background: url("/resources/img/icon-user.png") no-repeat center center;
+	background-size: contain;
+}
+
+.nick::before {
+	background: url("/resources/img/icon-nick.png") no-repeat center center;
+	background-size: contain;
+}
+
+.pw::before {
+	background: url("/resources/img/icon-pw.png") no-repeat center center;
+	background-size: 27px;
+}
+
+.re-pw::before {
+	background: url("/resources/img/icon-key.png") no-repeat center center;
+	background-size: 25px;
+}
+
+.email::before {
+	background: url("/resources/img/icon-key.png") no-repeat center center;
+	background-size: 25px;
+}
+
+.tel::before {
+	background: url("/resources/img/icon-key.png") no-repeat center center;
+	background-size: 25px;
+}
+
+.addr::before {
+	background: url("/resources/img/icon-key.png") no-repeat center center;
+	background-size: 25px;
+}
