@@ -7,9 +7,17 @@
 <link rel="stylesheet" href="/resources/css/login.css">
 </head>
 <body>
-	<div class="center">
-		<div class="form-content col-flex center">
-			<form id="loginForm" class="col-flex" action="login">
+	<div style="margin: 0 auto; width: 600px;">
+		<div class="form-content row-flex">
+			<form id="loginForm" class="col-flex test-line" action="login">
+				<div class="form-input id border-radius-up">
+					<input id="id" type="text" placeholder="아이디">
+				</div>
+				<div class="form-input pw">
+					<input id="pw" type="password" placeholder="비밀번호">
+				</div>
+			</form>
+			<form id="registerForm" class="col-flex test-line" action="login">
 				<div class="form-input id border-radius-up">
 					<input id="id" type="text" placeholder="아이디">
 				</div>
@@ -23,7 +31,7 @@
 					<input id="re-pw" type="password" placeholder="비밀번호 확인">
 				</div>
 				<div class="form-input email border-radius-up">
-					<input id="email" type="text" placeholder="[선택]이메일 (비밀번호 찾기용)">
+					<input id="email" type="text" placeholder="이메일">
 					<div style="padding: 0 10px 0 10px;">@</div>
 					<input id="email2" type="text">
 				</div>

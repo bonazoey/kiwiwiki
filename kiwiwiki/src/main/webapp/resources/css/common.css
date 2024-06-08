@@ -16,6 +16,7 @@ footer {
 
 .center {
 	margin: 0 auto;
+	justify-content: center;
 }
 
 .row-flex{
