@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -37,10 +37,10 @@
 <body>
 	<div class="col-flex search">
 		<img alt="/resources/img/no-img.png" src="/resources/img/main-img.png" width="400">
-		<form id="searchfrm" action="board">
+		<form id="searchfrm" action="getSearchList">
 			<div class="search-box">
-				<input style="width: 440px;" type="text">
-				<img alt="" src="/resources/img/kiwi.png">
+				<input name="keyword" style="width: 440px;" type="text">
+				<img alt="" src="/resources/img/kiwi.png" onclick="submit()">
 			</div>
 		</form>
 	</div>
