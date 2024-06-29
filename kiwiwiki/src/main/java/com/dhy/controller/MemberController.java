@@ -19,7 +19,9 @@ public class MemberController {
 	private MemberService memberService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String getloginPage() {
+	public String getloginPage(HttpServletRequest request) {
+		String prevPage = request.getHeader("referer");
+		request.getSession().setAttribute("prevPage", prevPage);
 		return "login/login";
 	}
 	
@@ -34,7 +36,12 @@ public class MemberController {
 		HttpSession session = request.getSession();
 		System.out.println("[INFO] 로그인 성공 ID : " + vo.getId());
 		session.setAttribute("info", vo);
-		return "redirect:/";
+		String prevPage = (String)request.getSession().getAttribute("prevPage");
+		if (prevPage == null) {
+			return "redirect:/";
+		} else {
+			return "redirect:" + prevPage;
+		}
 	}
 	
 	@RequestMapping(value = "/logout")

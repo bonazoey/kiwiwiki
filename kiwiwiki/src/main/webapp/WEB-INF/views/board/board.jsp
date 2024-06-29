@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>꺼무위키</title>
 </head>
+<%@ include file="../include/header.jsp"%>
 <body>
 	<h3>제목 : ${content.title}</h3>
 	<h4>내용</h4>

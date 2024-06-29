@@ -29,4 +29,24 @@ public class BoardServiceImpl implements BoardService {
 		return dao.getBoard(title);
 	}
 
+	@Override
+	public List<String> getHotList() {
+		return dao.getHotList();
+	}
+
+	@Override
+	public List<String> getRecentList() {
+		return dao.getRecentList();
+	}
+
+	@Override
+	public List<String> getRandomList() {
+		return dao.getRandomList();
+	}
+
+	@Override
+	public void insertBoard(String title, String text, String id) {
+		dao.insertBoard(title, text, id);
+	}
+
 }
