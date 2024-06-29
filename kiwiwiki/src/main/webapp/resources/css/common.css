@@ -34,6 +34,10 @@ footer {
 	border: solid 1px;
 }
 
+.test-color {
+	background-color: blue;
+}
+
 .search-box {
 	display: flex;
 	align-items: center;
