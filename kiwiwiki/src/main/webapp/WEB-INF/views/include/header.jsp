@@ -4,7 +4,7 @@
 <link rel="shortcut icon" href="<c:url value='/resources/favicon.ico'/>" type="image/x-icon"/>
 <link rel="icon" href="<c:url value='/resources/favicon.ico'/>" type="image/x-icon"/>
 
-<header class="row-flex text-line">
+<header class="row-flex test-line">
 	<c:choose>
 		<c:when test="${info == null}">
 			<button type="button" id="login" onclick="location.href='login'">로그인</button>

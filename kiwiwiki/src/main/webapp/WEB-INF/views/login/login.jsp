@@ -7,15 +7,15 @@
 <link rel="stylesheet" href="/resources/css/login.css">
 </head>
 <body>
-	<div id="title">로그인</div>
-	<div style="margin: 0 auto; width: 600px;">
-		<div class="form-content row-flex">
+	<div id="form-container" class="col-flex">
+		<div id="title">와구와구</div>
+		<div id="form-box" class="form-content row-flex">
 			<form id="loginForm" class="col-flex form" action="/login" method="post">
 				<div class="form-input id">
-					<input id="id" name="id" type="text" placeholder="아이디">
+					<input name="id" type="text" placeholder="아이디">
 				</div>
 				<div class="form-input pw">
-					<input id="pw" name="pw" type="password" placeholder="비밀번호">
+					<input name="pw" type="password" placeholder="비밀번호">
 				</div>
 				<small>${msg}</small>
 				<div>
@@ -32,13 +32,12 @@
 				<div class="form-input pw">
 					<input id="pw" type="password" placeholder="비밀번호">
 				</div>
-				<div class="form-input re-pw">
-					<input id="re-pw" type="password" placeholder="비밀번호 확인">
+				<div id="pwCheck">
 				</div>
 				<div class="form-input email">
 					<input id="email" type="text" placeholder="이메일">
 					<div style="padding: 0 10px 0 10px;">@</div>
-					<input id="email2" type="text">
+					<input id="email2" type="text" placeholder="example.com">
 				</div>
 				<div class="form-input tel">
 					<input id="tel" type="tel" placeholder="연락처">
@@ -57,6 +56,7 @@
 		</div>	
 	</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 	const cover = document.querySelector('#formCover');
 	const title = document.querySelector('#coverTitle');
@@ -73,5 +73,22 @@
 			content.textContent = '지금 당장 접속하여 도파민을 과도하게 분비시키세요!';
 		}
 	})
+	$(document).ready(function() {
+			$('#pw').on('input', function() {
+					const regex = /^(?=.*[a-zA-Z\d])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/;
+					var pw = $('#pw').val();
+					console.log('ddd');
+					console.log(pw);
+					if (!regex.test(pw)) {
+						$('#pwCheck').text("8~16자의 영문 대/소문자, 숫자, 특수문자를 사용해 주세요.");
+						$('#pwCheck').css('color', 'red');
+					} else {
+						$('#pwCheck').text("사용 가능한 비밀번호입니다.");
+						$('#pwCheck').css('color', 'green');
+					}
+				}
+			);
+		}
+	);
 </script>
 </html>
