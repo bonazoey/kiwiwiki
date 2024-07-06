@@ -1,10 +1,22 @@
 @charset "UTF-8";
 
-.form-content {
+#form-container {
+	margin: 0 auto;
 	width: 600px;
 	height: 100%;
+	align-items: center;
+}
+
+
+.form-content {
+	width: 600px;
 	justify-content: space-between;
 	align-items: center;
+}
+
+#title {
+	height: 5%;
+	width: 100%;
 }
 
 .form{
@@ -23,12 +35,16 @@
 }
 
 .form-input input {
-	border: 0px 0px 1px 0px;
+	border-width: 0px 0px 1px;
+	outline: none;
 	flex-grow: 1;
 }
-#title {
-	position: absolute;
-	
+
+.form-input::before {
+	padding: 0 20px 0 0;
+	content: "";
+	width: 30px;
+	height: 30px;
 }
 
 #loginForm {
@@ -42,7 +58,7 @@
 }
 
 #formCover {
-	top: 50%;
+	top: 52.5%;
 	left: 50%;
 	border: solid 2px olive;
 	border-radius: 20px 0px 0px 20px;

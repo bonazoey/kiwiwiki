@@ -22,7 +22,8 @@
 
 .search {
 	align-items: center;
-	height: 85%;
+	width: 1000px;
+	margin: 0 auto;
 }
 
 form {
